@@ -1,10 +1,10 @@
 
 const hexTable = () => {
-  let array = [];
+  let hexArray = [];
   for (let i = 0; i < 256; ++i) {
-    array.push('%' + ((i < 16 ? '0' : '') + i.toString(16)).toUpperCase());
+    hexArray.push('%' + ((i < 16 ? '0' : '') + i.toString(16)).toUpperCase());
   }
-  return array;
+  return hexArray;
 };
 
 const hexValue = (char) => {
@@ -16,6 +16,10 @@ const hexValue = (char) => {
   }
 }
 
+/**
+* @param {string} str a string of which some of the characters to be replaced with %hexadecimal value 
+* @param {string} pattern a regular expression pattern for charcters to be hexadecimalised
+*/
 const hexify = (str, pattern) => {
   return str.replace(pattern, hexValue);
 }
