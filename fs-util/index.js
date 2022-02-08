@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @author Jana Rangasamy EmailID:<janagr7@gmail.com>
+ * @author Jana R EmailID:<janagr7@gmail.com>
  * @description created on 20-01-2022.
  */
 
@@ -10,8 +10,8 @@ const path = require('path');
 
 /**
  * 
- * @param {string} srcPath a string represents a path
- * @returns {boolean} true if the srcPath representing a filepath
+ * @param {string} srcPath a string that represents a path.
+ * @returns {boolean} true if the srcPath represents a filepath.
  * 
  */
 const isFile = (srcPath) => {
@@ -24,8 +24,8 @@ const isFile = (srcPath) => {
 
 /**
  * 
- * @param {string} srcPath a string represents a path.
- * @returns {boolean} true if the srcPath representing a directory.
+ * @param {string} srcPath a string that represents a path.
+ * @returns {boolean} true if the srcPath represents a directory.
  * 
  */
 const isDirectory = (srcPath) => {
@@ -38,7 +38,7 @@ const isDirectory = (srcPath) => {
 
 /**
  * 
- * @param {string} srcPath a string represents a path.
+ * @param {string} srcPath a string that represents a path.
  * @returns {Array} an array of files in the given path.
  * 
  */
@@ -57,9 +57,9 @@ const getFiles = (srcPath) => {
 
 /**
  * 
- * @param {string} srcPath a string represents a path.
- * @param {string} fileType a string representing the extension name of the file.
- * @returns {Array} an array of filtered files based on their extension name.
+ * @param {string} srcPath a string that represents a path.
+ * @param {string} fileType a string that represents the extension name of the file.
+ * @returns {Array} an array of files filtered based on their extension name.
  * 
  */
 const getFilesByType = (srcPath, fileType) => {
@@ -81,7 +81,7 @@ const getFilesByType = (srcPath, fileType) => {
 
 /**
  * 
- * @param {string} srcPath a string represents a path. 
+ * @param {string} srcPath a string that represents a path. 
  * @returns {Array} an array of filtered directories.
  * 
  */
@@ -100,7 +100,7 @@ const getDirectories = (srcPath) => {
 
 /**
  * 
- * @param {string} srcPath a string represents a path. 
+ * @param {string} srcPath a string that represents a path. 
  * @returns {Object} dirEnt an object details of files and subdirectories
  * 
  */
