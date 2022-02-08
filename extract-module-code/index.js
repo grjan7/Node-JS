@@ -1,4 +1,4 @@
-//extracts implementation
+//extracts implementated code in javascript  
 
 'use strict';
 
@@ -11,6 +11,11 @@ const isUndefined = (item) => item == undefined;
 const isArray = (item) => item instanceof Array;
 const isObject = (item) => (typeof item == "object") && !isNull(item) && !isUndefined(item) && !isArray(item);
 
+/**
+* @param {object} obj an object
+* @returns {boolean} true if the any of the object members is function or object 
+*
+*/ 
 const hasObjectFunction = (obj) => {
   let hasObjFn = false;
   for (let item of Object.keys(obj)) {
@@ -22,6 +27,7 @@ const hasObjectFunction = (obj) => {
   return hasObjFn;
 }
 
+//Sets color of the keyword "function" in cyan 
 const styleFunction = (str) => {
   return str.replace(/function /g, (txt) => color.cyan(txt));
 }
@@ -44,7 +50,7 @@ const printObjects = (moduleExports) => {
         console.log(`\n${color.cyanBright(item)}: ${stringified}`);
       } else if (_isObject) {
         if (hasObjectFunction(_item)) {
-          printObjects(_item);
+          printObjects(_item); //recursive
         } else {
           if (Object.keys(_item).length > 0) {
             console.log(`${color.white(item)}: `);
@@ -77,6 +83,11 @@ const printObjects = (moduleExports) => {
   }
 }
 
+/**
+* @param {string} moduleName name of the module/library of which the code needs to be extracted 
+* @returns {string} a list of code for each items exported by the module/library.  
+*
+*/
 const extractCode = (moduleName) => {
   try {
     let moduleExports = require(moduleName);
