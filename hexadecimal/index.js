@@ -19,6 +19,7 @@ const hexValue = (char) => {
 /**
 * @param {string} str a string of which some of the characters to be replaced with %hexadecimal value 
 * @param {string} pattern a regular expression pattern for charcters to be hexadecimalised
+
 */
 const hexify = (str, pattern) => {
   return str.replace(pattern, hexValue);

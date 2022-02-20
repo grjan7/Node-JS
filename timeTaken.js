@@ -4,6 +4,7 @@
  * 
  * @param {function} func 
  * 
+ * @example timeTakenByAFunction(() => console.log("This is a function."));
  */
 const timeTakenByAFunction = (func) => {
   let time1, time2;
@@ -13,5 +14,4 @@ const timeTakenByAFunction = (func) => {
   time1 != undefined && time2 > time1 ? console.log(`Time Taken: ${time2} - ${time1} = ${time2 - time1} ms.`) : null;
 }
 
-//usage
-timeTakenByAFunction(() => console.log("This is a function."));
+

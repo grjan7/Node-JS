@@ -15,7 +15,7 @@ const isObject = (item) => (typeof item == "object") && !isNull(item) && !isUnde
 * @param {object} obj an object
 * @returns {boolean} true if the any of the object members is function or object 
 *
-*/ 
+*/
 const hasObjectFunction = (obj) => {
   let hasObjFn = false;
   for (let item of Object.keys(obj)) {
